@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.snow.system.mapper.SysOaTaskDistributeMapper">
+    
+    <resultMap type="SysOaTaskDistribute" id="SysOaTaskDistributeResult">
+        <result property="id"    column="id"    />
+        <result property="taskNo"    column="task_no"    />
+        <result property="taskDistributeId"    column="task_distribute_id"    />
+        <result property="taskExecuteId"    column="task_execute_id"    />
+        <result property="taskExecuteStatus"    column="task_execute_status"    />
+        <result property="taskCompleteTime"    column="task_complete_time"    />
+        <result property="taskStartTime"    column="task_start_time"    />
+        <result property="taskSuspendTime"    column="task_suspend_time"    />
+        <result property="taskFeedback"    column="task_feedback"    />
+        <result property="revision"    column="revision"    />
+        <result property="createBy"    column="create_by"    />
+        <result property="isDelete"    column="is_delete"    />
+        <result property="createTime"    column="create_time"    />
+        <result property="updateBy"    column="update_by"    />
+        <result property="updateTime"    column="update_time"    />
+    </resultMap>
+
+    <sql id="selectSysOaTaskDistributeVo">
+        select id, task_no, task_distribute_id, task_execute_id, task_execute_status, task_complete_time, task_start_time, task_suspend_time, task_feedback, revision, create_by, is_delete, create_time, update_by, update_time from sys_oa_task_distribute
+    </sql>
+
+
+</mapper>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.snow.system.mapper.SysOaTaskMapper">
+    
+    <resultMap type="SysOaTask" id="SysOaTaskResult">
+        <result property="taskNo"    column="task_no"    />
+        <result property="taskName"    column="task_name"    />
+        <result property="taskContent"    column="task_content"    />
+        <result property="taskStatus"    column="task_status"    />
+        <result property="taskType"    column="task_type"    />
+        <result property="expectedTime"    column="expected_time"    />
+        <result property="priority"    column="priority"    />
+        <result property="taskSource"    column="task_source"    />
+        <result property="taskOutsideId"    column="task_outside_id"    />
+        <result property="taskUrl"    column="task_url"    />
+        <result property="revision"    column="revision"    />
+        <result property="createBy"    column="create_by"    />
+        <result property="isDelete"    column="is_delete"    />
+        <result property="createTime"    column="create_time"    />
+        <result property="updateBy"    column="update_by"    />
+        <result property="updateTime"    column="update_time"    />
+    </resultMap>
+
+    <sql id="selectSysOaTaskVo">
+        select task_no, task_name, expected_time,priority,task_content, task_status, task_type, task_source, task_outside_id, task_url, revision, create_by, is_delete, create_time, update_by, update_time from sys_oa_task
+    </sql>
+</mapper>
